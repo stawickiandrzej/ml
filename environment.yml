@@ -1,4 +1,4 @@
-name: project_name
+name: mlprepvenv
 channels:
  - conda-forge
  - defaults
