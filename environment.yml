@@ -1,1 +1,13 @@
-
+name: project_name
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python== ?????
+ - pandas
+ - pytest
+ - isort
+ - pre-commit
+ - flake8
+ - pip
+ 
