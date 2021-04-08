@@ -10,4 +10,7 @@ dependencies:
  - pre-commit
  - flake8
  - pip
+ - notebook
+ - nb_conda_kernels
+
  
