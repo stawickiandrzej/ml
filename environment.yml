@@ -10,5 +10,4 @@ dependencies:
  - pre-commit
  - flake8
  - pip
- - pylance
  
