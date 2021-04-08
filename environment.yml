@@ -3,11 +3,12 @@ channels:
  - conda-forge
  - defaults
 dependencies:
- - python== ?????
+ - python== 3.8.5
  - pandas
  - pytest
  - isort
  - pre-commit
  - flake8
  - pip
+ - pylance
  
