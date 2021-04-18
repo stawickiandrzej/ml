@@ -1,3 +1,9 @@
+# Calculate: 
+# - mean, 
+# - standard deviation, 
+# - correlation coefficient (Pearson)
+# - variance ?
+
 import pandas as pd
 
 # Dataset:
@@ -7,12 +13,6 @@ y2 = [9.14, 8.14, 8.74, 8.77, 9.26, 8.10, 6.13, 3.10, 9.13, 7.26, 4.74]
 y3 = [7.46, 6.77, 12.74, 7.11, 7.81, 8.84, 6.08, 5.39, 8.15, 6.42, 5.73]
 x4 = [8, 8, 8, 8, 8, 8, 8, 19, 8, 8, 8]
 y4 = [6.58, 5.76, 7.71, 8.84, 8.47, 7.04, 5.25, 12.50, 5.56, 7.91, 6.89]
- 
-# Calculate: 
-# - mean, 
-# - standard deviation, 
-# - correlation coefficient (Pearson)
-# - variance ?
 
 
 df = pd.DataFrame({'x': x, 'x4': x4, 'y1': y1, 'y2': y2, 'y3': y3, 'y4': y4})
