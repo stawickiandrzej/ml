@@ -12,5 +12,10 @@ dependencies:
  - pip
  - notebook
  - nb_conda_kernels
-
+  - seaborn
+  - altair
+  - empiricaldist
+  - Streamlit
+  - scikit-learn
+  
  
