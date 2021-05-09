@@ -1,21 +1,19 @@
 name: mlprepvenv
 channels:
- - conda-forge
- - defaults
+  - conda-forge
+  - defaults
 dependencies:
- - python== 3.8.5
- - pandas
- - pytest
- - isort
- - pre-commit
- - flake8
- - pip
- - notebook
- - nb_conda_kernels
- - seaborn
- - altair
- - empiricaldist
- - Streamlit
- - scikit-learn
-  
- 
+  - python== 3.8.5
+  - pandas
+  - pytest
+  - isort
+  - pre-commit
+  - flake8
+  - pip
+  - notebook
+  - nb_conda_kernels
+  - seaborn
+  - altair
+  - Streamlit
+  - scikit-learn
+  - autopep8
