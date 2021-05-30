@@ -40,9 +40,9 @@ def dict_anscombe(x: list, y1: list, y2: list, y3: list, x4: list, y4: list, out
     Returns:
         pd.DataFrame: [DataFrame of Anscombe quartet]
     """
-    df_dict = {
-        'I': x,
-        'II': y1,
+    df_dict = {  # it's not a anscombe's quartet, it's anscombe's data. No need to change structure of dictionary,
+        'I': x,  # it's well handeld in anscombe_plot() and statistics_math().
+        'II': y1,  # Try to name columns by variable names
         'III': y2,
         'IV': y3,
         'V': x4,
@@ -66,9 +66,9 @@ def anscombe_plot(x: list, y1: list, y2: list, y3: list, x4: list, y4: list, out
         y4 (list): [variable y4]
         output (str): [folder path]
     """
-    scatter_plot_df = anscombe_df.reset_index()
-    fig, axs = plt.subplots(2, 2, sharex=True, sharey=True, figsize=(6, 6), )
-    axs[0, 0].set(xlim=(0, 20), ylim=(2, 14))
+    scatter_plot_df = anscombe_df.reset_index()  # local variable is not used
+    fig, axs = plt.subplots(2, 2, sharex=True, sharey=True, figsize=(6, 6), )  # try "all" instead of "True" in sharex,
+    axs[0, 0].set(xlim=(0, 20), ylim=(2, 14))                                  # and sharey for cleaner look
     axs[0, 0].set(xticks=(0, 10, 20), yticks=(4, 8, 12))
     axs[0, 0].scatter(x, y1)
     axs[0, 0].title.set_text("Set I")
@@ -80,6 +80,8 @@ def anscombe_plot(x: list, y1: list, y2: list, y3: list, x4: list, y4: list, out
     axs[1, 1].title.set_text("Set IV")
     fig.tight_layout()
     plt.savefig(os.path.join(output, 'anscombe_q_plot.jpg'))
+    # there's no regression line, check it out:
+    # https://www.statology.org/scatterplot-with-regression-line-python/
 
 
 def statistics_frame(df: pd.DataFrame, output: str) -> pd.DataFrame:
@@ -92,6 +94,7 @@ def statistics_frame(df: pd.DataFrame, output: str) -> pd.DataFrame:
     Returns:
         pd.DataFrame: [calculated statistical values for the DataFrame]
     """
+
     def statistics_math(x: list, y: list) -> list:
         """statistics_math [calculates statistical data for given params]
 
@@ -109,7 +112,7 @@ def statistics_frame(df: pd.DataFrame, output: str) -> pd.DataFrame:
 
         return [variance, mean, std_dev, corr]
 
-    set_I = statistics_math(df["I"], df["II"])
+    set_I = statistics_math(df["I"], df["II"])  # variable in function should be lowercase
     set_II = statistics_math(df["I"], df["III"])
     set_III = statistics_math(df["I"], df["IV"])
     set_IV = statistics_math(df["V"], df["VI"])
